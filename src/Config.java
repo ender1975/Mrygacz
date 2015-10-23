@@ -5,7 +5,7 @@ public class Config {
 	public static final int FRAME_SIZE = 800;
 
 	//Blinking square size
-	public static final int SQUARE_SIZE = 200;
+	public static final int SQUARE_SIZE = 150;
 	
 	//Square panel border
 	public static final int PANEL_BORDER = 200;
