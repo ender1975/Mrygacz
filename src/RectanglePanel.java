@@ -18,21 +18,18 @@ public class RectanglePanel extends JPanel {
 	ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
 
 	private Color color;
-	private int x, y, width, height;
-	private int blinkInterval;
+	private int width, height;
+	private long blinkInterval;
 
-
-
-	public RectanglePanel(Color color, int x, int y, int width, int height, int blinkInterval) {
+	public RectanglePanel(Color color, int width, int height, long blinkInterval) {
 		super();
 		this.color = color;
-		this.x = x;
-		this.y = y;
+
 		this.width = width;
 		this.height = height;
 		this.blinkInterval = blinkInterval;
-		setBackground(Color.BLACK );
-		
+		setBackground(Color.BLACK);
+
 		startBlinking();
 	}
 
@@ -47,30 +44,28 @@ public class RectanglePanel extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponents(g);
-		
-		
-		int panelWidth = getWidth();
-		int panelHeight = getHeight();
-		
-		
-		
+
+
+
 		if (isVisible) {
-			g.setColor(Color.BLACK );
-			g.fillRect(x, y, width, height);			
+			drawCenteredRectangle(Color.BLACK, g);
 			isVisible = false;
 		} else {
-			g.setColor(color);
-			g.fillRect(x, y, width, height);
+			drawCenteredRectangle(color, g);
 			isVisible = true;
 		}
-		
 
 	}
-	
-	
-	
-	private void drawCenteredRectangle(Color color) {
-		
+
+	private void drawCenteredRectangle(Color color, Graphics g) {
+
+		int panelWidth = getWidth();
+		int panelHeight = getHeight();
+
+		int x = (int) (panelWidth / 2 - 0.5 * width);
+		int y = (int) (panelHeight / 2 - 0.5 * height);
+		g.setColor(color);
+		g.fillRect(x, y, width, height);
 	}
 
 }
