@@ -15,7 +15,7 @@ public class RectanglePanel extends JPanel {
 	private boolean isVisible = false;
 
 	// For telling the panel to be repainted at regular intervals
-	ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+	private ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
 	private Color color;
 	private int width, height;
@@ -33,8 +33,8 @@ public class RectanglePanel extends JPanel {
 		startBlinking();
 	}
 
-	public void startBlinking() {
-		service.scheduleAtFixedRate(new Runnable() {
+	private void startBlinking() {
+		executor.scheduleAtFixedRate(new Runnable() {
 			public void run() {
 				repaint();
 			}

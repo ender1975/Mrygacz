@@ -20,7 +20,7 @@ public class Config {
 	public static final int SQUARE_3_FREQ = 4;
 
 	//Square 4 frequency (Hz)
-	public static final int SQUARE_4_FREQ = 8;
+	public static final int SQUARE_4_FREQ = 25;
 	
 	
 	
