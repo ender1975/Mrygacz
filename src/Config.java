@@ -11,16 +11,16 @@ public class Config {
 	public static final int PANEL_BORDER = 200;
 	
 	//Square 1 frequency (Hz)
-	public static final int SQUARE_1_FREQ = 1;
+	public static final int SQUARE_1_FREQ = 8;
 	
 	//Square 2 frequency (Hz)
-	public static final int SQUARE_2_FREQ = 2;
+	public static final int SQUARE_2_FREQ = 10;
 
 	//Square 3 frequency (Hz)
-	public static final int SQUARE_3_FREQ = 4;
+	public static final int SQUARE_3_FREQ = 12;
 
 	//Square 4 frequency (Hz)
-	public static final int SQUARE_4_FREQ = 25;
+	public static final int SQUARE_4_FREQ = 14;
 	
 	
 	
