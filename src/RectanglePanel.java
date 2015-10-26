@@ -13,6 +13,8 @@ public class RectanglePanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 
 	private boolean isVisible = false;
+	
+	private static final long ANIMATION_DELAY = 0;
 
 	// For telling the panel to be repainted at regular intervals
 	private ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
@@ -33,19 +35,15 @@ public class RectanglePanel extends JPanel {
 		startBlinking();
 	}
 
-	private void startBlinking() {
-		executor.scheduleAtFixedRate(new Runnable() {
-			public void run() {
-				repaint();
-			}
-		}, 0, blinkInterval, TimeUnit.MILLISECONDS);
+	
+	
+	private void startBlinking() {				
+		executor.scheduleAtFixedRate(() -> {repaint();}, ANIMATION_DELAY, blinkInterval, TimeUnit.MILLISECONDS);
 	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponents(g);
-
-
 
 		if (isVisible) {
 			drawCenteredRectangle(Color.BLACK, g);
