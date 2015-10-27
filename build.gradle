@@ -1,1 +1,17 @@
+
+
 apply plugin: "java"
+
+task execute(type:JavaExec) {
+	main = "pl.psnc.mrygacz.Mrygacz"
+	classpath = sourceSets.main.runtimeClasspath
+}
+
+
+jar {
+	manifest {
+		attributes =  ['Manifest-Version': '1.0', 
+			           'Main-Class': 'pl.psnc.mrygacz.Mrygacz', 
+					   'Implementation-Version': '1.0']
+	}
+}
