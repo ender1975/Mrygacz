@@ -17,10 +17,10 @@ public class Mrygacz {
 
 		frame.getContentPane().setBackground(Color.BLACK);
 
-		frame.add(new SquarePanel(Color.BLUE, Config.SQUARE_SIZE, Config.getBlinkInterval(Config.SQUARE_1_FREQ)));
-		frame.add(new SquarePanel(Color.RED, Config.SQUARE_SIZE, Config.getBlinkInterval(Config.SQUARE_2_FREQ)));
-		frame.add(new SquarePanel(Color.GREEN, Config.SQUARE_SIZE, Config.getBlinkInterval(Config.SQUARE_3_FREQ)));
-		frame.add(new SquarePanel(Color.YELLOW, Config.SQUARE_SIZE, Config.getBlinkInterval(Config.SQUARE_4_FREQ)));
+		frame.add(new SquarePanel(Color.BLUE, Config.SQUARE_SIZE, Config.SQUARE_1_FREQ));
+		frame.add(new SquarePanel(Color.RED, Config.SQUARE_SIZE, Config.SQUARE_2_FREQ));
+		frame.add(new SquarePanel(Color.GREEN, Config.SQUARE_SIZE, Config.SQUARE_3_FREQ));
+		frame.add(new SquarePanel(Color.YELLOW, Config.SQUARE_SIZE, Config.SQUARE_4_FREQ));
 
 		frame.setVisible(true);
 

@@ -25,14 +25,7 @@ public class Config {
 	public static final int SQUARE_4_FREQ = 25;
 	
 	
-	/**
-	 * Get blink interval in milliseconds
-	 * @param frequency Frequency of blinking in Hz
-	 * @return interval in milliseconds
-	 */
-	public static long getBlinkInterval(int frequency) {
-		return (long) 1000/frequency;
-	}
+
 
 	
 }

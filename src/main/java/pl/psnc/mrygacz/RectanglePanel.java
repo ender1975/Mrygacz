@@ -25,13 +25,13 @@ public class RectanglePanel extends JPanel {
 	private int width, height;
 	private long blinkInterval;
 
-	public RectanglePanel(Color color, int width, int height, long blinkInterval) {
+	public RectanglePanel(Color color, int width, int height, int blinkFrequency) {
 		super();
 		this.color = color;
 
 		this.width = width;
 		this.height = height;
-		this.blinkInterval = blinkInterval;
+		this.blinkInterval = getBlinkInterval(blinkFrequency);
 		setBackground(Color.BLACK);
 
 		startBlinking();
@@ -68,4 +68,12 @@ public class RectanglePanel extends JPanel {
 		g.fillRect(x, y, width, height);
 	}
 
+	/**
+	 * Get blink interval in milliseconds
+	 * @param frequency Frequency of blinking in Hz
+	 * @return interval in milliseconds
+	 */
+	private static long getBlinkInterval(int frequency) {
+		return (long) 1000/frequency;
+	}
 }
