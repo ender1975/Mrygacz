@@ -1,3 +1,5 @@
+package pl.psnc.mrygacz;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.concurrent.Executors;

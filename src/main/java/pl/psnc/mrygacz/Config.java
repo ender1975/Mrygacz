@@ -1,3 +1,5 @@
+package pl.psnc.mrygacz;
+
 
 public class Config {
 
