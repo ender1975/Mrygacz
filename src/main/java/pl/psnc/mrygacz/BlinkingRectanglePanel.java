@@ -8,7 +8,12 @@ import java.util.concurrent.TimeUnit;
 
 import javax.swing.JPanel;
 
-public class RectanglePanel extends JPanel {
+
+/**
+ * Blinking rectangle panel showing a blinking rectangle in the middle of it.
+ * You can set the color, size and blinking frequency of the rectangle within the panel.
+ */
+public class BlinkingRectanglePanel extends JPanel {
 	/**
 	 * 
 	 */
@@ -25,7 +30,7 @@ public class RectanglePanel extends JPanel {
 	private int width, height;
 	private long blinkInterval;
 
-	public RectanglePanel(Color color, int width, int height, int blinkFrequency) {
+	public BlinkingRectanglePanel(Color color, int width, int height, int blinkFrequency) {
 		super();
 		this.color = color;
 
