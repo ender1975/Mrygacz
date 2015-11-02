@@ -45,7 +45,7 @@ public class BlinkingRectanglePanel extends JPanel {
 	
 	
 	private void startBlinking() {				
-		executor.scheduleAtFixedRate(() -> {repaint();}, ANIMATION_DELAY, blinkInterval, TimeUnit.MILLISECONDS);
+		executor.scheduleAtFixedRate(this::repaint, ANIMATION_DELAY, blinkInterval, TimeUnit.MILLISECONDS);
 	}
 
 	@Override
